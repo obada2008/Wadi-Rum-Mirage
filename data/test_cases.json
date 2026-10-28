@@ -1,0 +1,842 @@
+[
+  {
+    "id": "SYN-001",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-002",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-003",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-004",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-005",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-006",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-007",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-008",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-009",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-010",
+    "label": "trust_transfer",
+    "message": "أعلنت مؤسسة رسمية عن خدمة جديدة، ولهيك ابعت رمز التحقق OTP عبر الرسالة. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 1
+  },
+  {
+    "id": "SYN-011",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-012",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-013",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-014",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-015",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-016",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-017",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-018",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-019",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-020",
+    "label": "trust_transfer",
+    "message": "بما إن الوزارة أطلقت خدمة جديدة، ادخل كود التفعيل على الموقع https://example.invalid/verify الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 2
+  },
+  {
+    "id": "SYN-021",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-022",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-023",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-024",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-025",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-026",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-027",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-028",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-029",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-030",
+    "label": "trust_transfer",
+    "message": "الشركة معروفة بالسوق، لذلك ادفع رسوم التفعيل فوراً. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 3
+  },
+  {
+    "id": "SYN-031",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-032",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-033",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-034",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-035",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-036",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-037",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-038",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-039",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-040",
+    "label": "trust_transfer",
+    "message": "الجامعة جهة معترف فيها، ولهذا أدخل كلمة المرور لاستكمال الطلب. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 4
+  },
+  {
+    "id": "SYN-041",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-042",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-043",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-044",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-045",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-046",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-047",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-048",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-049",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-050",
+    "label": "direct_risk",
+    "message": "مبروك ربحت جائزة، ادفع رسوم التفعيل الآن. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 5
+  },
+  {
+    "id": "SYN-051",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-052",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-053",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-054",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-055",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-056",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-057",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-058",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-059",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-060",
+    "label": "direct_risk",
+    "message": "ادخل رمز التحقق OTP الآن لاستلام الهدية. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 6
+  },
+  {
+    "id": "SYN-061",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-062",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-063",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-064",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-065",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-066",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-067",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-068",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-069",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-070",
+    "label": "benign",
+    "message": "يمكنك زيارة موقع المؤسسة الرسمي بالبحث عن اسمها بنفسك. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 7
+  },
+  {
+    "id": "SYN-071",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-072",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-073",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-074",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-075",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-076",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-077",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-078",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-079",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-080",
+    "label": "benign",
+    "message": "تابع موقع الجامعة لمعرفة جدول المحاضرات. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 8
+  },
+  {
+    "id": "SYN-081",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-082",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-083",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-084",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-085",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-086",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-087",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-088",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-089",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-090",
+    "label": "safety",
+    "message": "لا تبعت رمز التحقق لأي شخص حتى لو ادعى أنه موظف رسمي. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 9
+  },
+  {
+    "id": "SYN-091",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-092",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-093",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-094",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-095",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-096",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-097",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-098",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-099",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-100",
+    "label": "safety",
+    "message": "إياك تشارك كلمة المرور عبر الرسائل. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 10
+  },
+  {
+    "id": "SYN-101",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-102",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-103",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-104",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-105",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-106",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-107",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-108",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-109",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-110",
+    "label": "uncertain",
+    "message": "سمعت عن إعلان جديد من مؤسسة، لكن لا أعرف تفاصيله. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 11
+  },
+  {
+    "id": "SYN-111",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-112",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. الرجاء الانتباه.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-113",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. في الأردن.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-114",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. اليوم.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-115",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. قبل اتخاذ أي إجراء.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-116",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. تم تداول الرسالة مؤخرًا.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-117",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. حسب ما وصلني.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-118",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. للتوضيح فقط.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-119",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. من رقم غير معروف.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  },
+  {
+    "id": "SYN-120",
+    "label": "uncertain",
+    "message": "وصلني رابط يدعي أنه رسمي ولا أعرف مصدره. الرجاء التحقق من المصادر.",
+    "origin": "synthetic_template",
+    "template_id": 12
+  }
+]

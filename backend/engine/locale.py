@@ -1,0 +1,46 @@
+"""English UI localization for the rule-based analysis. No unverified claims."""
+TEXT = {
+    'مشاركة رمز التحقق قد تسمح بالاستيلاء على الحساب.':'Sharing a verification code may enable account takeover.',
+    'لا تشارك كلمات المرور عبر الرسائل.':'Do not share passwords via messages.',
+    'تحقق من جهة التحصيل وشرعية الرسوم بشكل مستقل.':'Independently verify the payee and legitimacy of any fees.',
+    'لا تفصح عن بيانات الهوية إلا عبر قناة تتحقق منها بشكل مستقل.':'Do not disclose identity data unless you independently verify the channel.',
+    'نسبة رابط إلى جهة':'Unverified institutional link',
+    'ذكر اسم جهة لا يثبت ملكيتها للرابط. لم يتم فتح الرابط أو التحقق منه.':'Mentioning an organization does not establish ownership of a link. The URL was not opened or verified.',
+    'ضغط زمني':'Urgency pressure',
+    'يجمع النص بين استعجال وطلب بيانات أو إجراء حساس.':'The message combines urgency with a request for sensitive data or action.',
+    'انتقال ثقة غير مدعوم':'Unsupported trust transfer',
+    'الحديث عن جهة أو خدمة لا يثبت أن الإجراء المطلوب مخوّل من تلك الجهة.':'Mentioning an institution or service does not prove it authorized the requested action.',
+    'مؤشرات خطر مرتفعة — تحقق قبل التصرف':'Elevated risk indicators — verify before acting',
+    'هناك مؤشرات تستدعي التحقق':'Some signals require verification',
+    'الأدلة غير كافية للحكم':'Insufficient evidence to determine legitimacy',
+    'لم تُرصد مؤشرات بالقواعد الحالية':'No indicators detected by current rules',
+    'نص الرسالة':'Message text',
+    'ادعاء / جهة مذكورة':'Claim / mentioned organization',
+    'رابط غير موثّق':'Unverified URL',
+    'إجراء حساس مطلوب':'Sensitive action requested',
+    'تحقق من الجهة عبر موقعها الرسمي الذي تكتبه بنفسك، وليس من رابط الرسالة.':'Verify the organization by typing its official website address yourself, not via the message link.',
+    'غياب المؤشرات لا يثبت أن الرسالة آمنة.':'No detected signals does not prove the message is safe.',
+    'لا تشارك رمز التحقق أو كلمة المرور مع أي شخص.':'Never share an OTP or password with anyone.',
+    'شرعية الادعاء أو الصفة الرسمية لم يتم التحقق منها':'The claim or official affiliation has not been verified.',
+    'الادعاء لا يثبت شرعية الإجراء.':'The claim does not establish authorization for the requested action.',
+    'تحليل استدلالي للنص فقط؛ لا يتحقق من أخبار أو ملكية روابط أو هوية المرسل.':'Heuristic text analysis only; no verification of news, URL ownership, or sender identity.',
+    'قد توجد أخطاء، خصوصًا في النفي والصياغات غير المألوفة.':'Errors are possible, especially with negation and unusual phrasing.',
+    'النتيجة ليست حكمًا نهائيًا أو احتمالًا مُعايرًا.':'The result is not a definitive verdict or calibrated probability.',
+    'أوقف مشاركة بيانات الدخول':'Stop sharing credentials',
+    'رموز التحقق وكلمات المرور لا تُشارك عبر الرسائل أو المكالمات.':'Never share verification codes or passwords in messages or calls.',
+    'تحقق من الرسوم':'Verify payment requests',
+    'راجع الجهة بنفسك عبر قنوات موثقة قبل أي دفع.':'Contact the organization through independently verified channels before paying.',
+    'تحقق من عنوان الموقع':'Verify the website address',
+    'لا تفترض أن رابطاً تابع لجهة لمجرد ذكر اسمها؛ اكتب العنوان الرسمي بنفسك.':'A link is not authenticated just because an organization is named. Type the official address yourself.',
+    'افصل الادعاء عن الإجراء':'Separate the claim from the action',
+    'صحة وجود مؤسسة أو خدمة لا تثبت أن الجهة أرسلت هذا الطلب.':'An organization or service being real does not prove it sent the request.',
+    'لا تتعامل مع النتيجة كضمان':'Do not treat the result as a guarantee',
+    'عدم رصد مؤشر لا يعني أن الرسالة سليمة؛ تحقق مستقلاً عند الشك.':'No detected indicator does not mean the message is safe. Verify independently if unsure.',
+    'لا يخزن الخادم نص الرسالة ولا يزور روابطها.':'The server does not store the message text or visit included URLs.',
+    'otp_disclosure':'OTP disclosure','password_disclosure':'Password disclosure','payment':'Payment request','identity_data':'Identity data request',
+}
+def localize(value):
+    if isinstance(value, str):return TEXT.get(value,value)
+    if isinstance(value,dict):return {k:localize(v) for k,v in value.items()}
+    if isinstance(value,list):return [localize(v) for v in value]
+    return value

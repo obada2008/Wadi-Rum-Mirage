@@ -1,0 +1,46 @@
+/* Client-side security tools and case analysis */
+(()=>{'use strict';
+const lang=document.documentElement.lang==='en'?'en':'ar';const E=id=>document.getElementById(id);
+const localized={ar:{redacted:'تم إخفاء البيانات المحتملة. راجع النص قبل التحليل.',empty:'اكتب رسالة أولًا.',error:'تعذر التحليل. تأكد من تشغيل الخادم.',noturl:'لا يوجد رابط لتحليله.',urlNotice:'تحليل بنية الرابط فقط دون فتحه أو التحقق من سمعته.',caseReady:'تم إنشاء تقرير القضية محليًا.',noEdges:'لا توجد علاقات كافية للرسم في هذا التقرير.',relation:'العلاقة',danger:'تبرير غير مدعوم',generic:'علاقة مستخرجة من النص',none:'لا توجد نتائج',redaction:'تم تنقيح المحتوى قبل الإرسال',progress:'درس',correct:'إجابة صحيحة — ممتاز!',wrong:'إجابة غير صحيحة. اقرأ التفسير وحاول مجددًا.',check:'تحقق من الإجابة'},en:{redacted:'Potential private data has been masked. Review before analysis.',empty:'Enter a message first.',error:'Analysis failed. Check that the server is running.',noturl:'No URL was supplied.',urlNotice:'This is structural analysis only; links are never visited or reputation-checked.',caseReady:'Case report created locally.',noEdges:'Not enough relationships were found for an edge map.',relation:'Relationship',danger:'Unsupported justification',generic:'Detected textual relationship',none:'No findings',redaction:'Content was redacted before submission',progress:'Lesson',correct:'Correct answer — nice work!',wrong:'Not quite. Review the explanation and try again.',check:'Check answer'}}[lang];
+const ui=localized;let currentCase=null;let course=[];let lessonIndex=0;let answered=false;
+function node(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=String(txt);return n}
+function clear(n){if(n)n.replaceChildren()}
+function escapeNo(x){return String(x||'')}
+function redaction(input){let output=escapeNo(input);let total=0;const replace=(regex,value)=>{output=output.replace(regex,(...args)=>{total++;return typeof value==='function'?value(...args):value})};
+// Never send redacted phone/email/OTP fields as original text. This is best effort, not PII certification.
+replace(/\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi,'[EMAIL REDACTED]');
+replace(/(?:\+?962|\+?\d{1,3}[\s-])?0?7[789][\s-]?\d{3}[\s-]?\d{4}\b/g,'[PHONE REDACTED]');
+replace(/\b(?:OTP|verification\s+code|one[ -]?time\s+(?:pass(?:word|code)?|code)|رمز\s*(?:التحقق|التأكيد|الدخول))\s*(?:is|:|=|هو|رقم)?\s*[\-#:]*\s*\d{4,8}\b/gi,'[OTP REDACTED]');
+replace(/(?:https?:\/\/)[^\s<>"'\u060c\u061b]+/gi,match=>{try{const u=new URL(match);if(u.searchParams.size){for(const k of [...u.searchParams.keys()]){if(/token|key|session|auth|pass|email|phone|otp|code|secret|id|tracking/i.test(k))u.searchParams.set(k,'REDACTED')}return u.toString()}return match}catch{return '[LINK REDACTED]'}});
+return {text:output,count:total};}
+// Prevent a raw sensitive message from being transmitted by the preexisting analyze handler.
+const text=E('message');if(text){let preview=E('redact-preview');function updatePreview(){if(!preview)return;const r=redaction(text.value);preview.textContent=r.count?`${r.count} / ${r.text.slice(0,260)}`:''}
+text.addEventListener('input',updatePreview);E('manual-redact')?.addEventListener('click',()=>{if(!text.value.trim())return;text.value=redaction(text.value).text;text.dispatchEvent(new Event('input'));if(preview)preview.textContent=ui.redacted});
+E('analyze')?.addEventListener('click',()=>{if(E('auto-redact')?.checked&&text.value.trim()){const r=redaction(text.value);if(r.text!==text.value){text.value=r.text;text.dispatchEvent(new Event('input'));if(preview)preview.textContent=ui.redaction}}},true);
+text.addEventListener('keydown',e=>{if(e.ctrlKey&&e.key==='Enter'&&E('auto-redact')?.checked){const r=redaction(text.value);if(r.text!==text.value){text.value=r.text;text.dispatchEvent(new Event('input'));if(preview)preview.textContent=ui.redaction}}},true);
+}
+// Use the default Wadi Rum color palette.
+document.documentElement.removeAttribute('data-theme');
+// Attach navigation for the case builder.
+const labels={ar:{case:'ملف التحقيق'},en:{case:'Case Builder'}}[lang];
+for(const name of ['case'])document.querySelectorAll(`[data-view="${name}"]`).forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.view').forEach(v=>v.classList.toggle('show',v.id==='view-'+name));document.querySelectorAll('.nav-item').forEach(v=>v.classList.toggle('active',v.dataset.view===name));if(E('page-name'))E('page-name').textContent=labels[name];E('top-nav')?.classList.remove('open');E('menu')?.setAttribute('aria-expanded','false');history.replaceState(null,'','#'+name);window.scrollTo({top:0,behavior:'instant'});
+ document.querySelectorAll('.lang-switch a').forEach(a=>{const u=new URL(a.href);u.hash=name;a.href=u.toString()});
+}));
+document.querySelector('[data-open-case]')?.addEventListener('click',()=>document.querySelector('[data-view="case"]')?.click());
+// Explain existing graph edges without claiming a model-generated causal explanation.
+const graph=E('graph');let lastGraphFingerprint='';function showEdges(){const r=typeof state!=='undefined'?state.report:null;if(!r||!E('edge-list'))return;const key=JSON.stringify(r.graph);if(lastGraphFingerprint===key)return;lastGraphFingerprint=key;const list=E('edge-list');clear(list);const edges=r.graph?.edges||[];const nodes=Object.fromEntries((r.graph?.nodes||[]).map(n=>[n.id,n]));if(!edges.length){list.append(node('p','',ui.noEdges));return}edges.forEach((e,i)=>{const risk=e.type==='unsupported_justification';const btn=node('button','edge-pill'+(risk?' risky':''),`${i+1}. ${nodes[e.source]?.label||e.source} → ${nodes[e.target]?.label||e.target}`);btn.type='button';btn.addEventListener('click',()=>{const detail=E('edge-detail');detail.textContent=(risk?ui.danger:ui.generic)+' · '+(risk?(lang==='en'?'The cited claim does not independently establish permission for the sensitive action.':'ذكر الادعاء لا يثبت بشكل مستقل مشروعية الإجراء الحساس.'):(lang==='en'?'A detected connection, not proof of accuracy.':'صلة نصية مكتشفة وليست دليلًا على صحة الادعاء.'));});list.append(btn)})}
+if(graph){new MutationObserver(showEdges).observe(graph,{childList:true,subtree:false});}
+// Case report lives only in memory and is exported by explicit user action.
+const caseAnalyze=E('case-analyze');const caseExport=E('case-export');async function analyzeCase(){const message=E('case-message').value.trim(),link=E('case-url').value.trim(),notes=E('case-notes').value.trim();const pane=E('case-results');clear(pane);if(!message){pane.textContent=ui.empty;return}if(link&&!/^https?:\/\//i.test(link)){pane.textContent=lang==='en'?'Please enter a complete http(s) URL.':'أدخل رابطًا يبدأ بـ http أو https.';return}if(link.length>2000){pane.textContent=ui.noturl;return}
+caseAnalyze.disabled=true;try{
+const safeMessage=redaction(message).text;
+const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:safeMessage,mode:'rules',locale:lang==='en'?'en-US':'ar-JO'})});if(!response.ok)throw new Error('HTTP '+response.status);const report=await response.json();
+let urlData=null;if(link){try{const u=new URL(link);const sensitive=['token','key','secret','password','otp','session','auth'];urlData={scheme:u.protocol,hostname:u.hostname,port:u.port||null,path:u.pathname,query_keys:[...u.searchParams.keys()],sensitive_query_parameters:[...u.searchParams.keys()].filter(k=>sensitive.some(s=>k.toLowerCase().includes(s))),warning:ui.urlNotice}}catch{urlData={error:ui.noturl}}}
+const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(safeMessage));const hex=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('');currentCase={schema:'wrm-case-v1',created_at:new Date().toISOString(),name:E('case-name').value.slice(0,120),redacted_message_sha256:hex,url_analysis:urlData,notes:notes.slice(0,2000),assessment:report,warning:lang==='en'?'Educational findings only. Not a certified digital forensic report.':'نتائج تعليمية فقط وليست تقرير أدلة جنائية معتمدًا.'};
+const h=node('h3','',report.title||ui.caseReady);const desc=node('p','',`${lang==='en'?'Heuristic indicator':'المؤشر الاستدلالي'}: ${report.risk_score}/100`);const rules=node('div','case-rule-list');(report.rules||[]).forEach(x=>rules.append(node('p','',`${x.id} — ${x.title}: ${x.reason}`)));pane.append(h,desc,rules,node('p','',urlData?`${urlData.hostname||''} · ${ui.urlNotice}`:''),node('p','',`${lang==='en'?'SHA-256 of redacted message':'بصمة SHA-256 للرسالة المنقّحة'}: ${hex}`));caseExport.disabled=false;
+}catch(err){pane.textContent=ui.error+' '+err.message;currentCase=null;caseExport.disabled=true}finally{caseAnalyze.disabled=false}}
+caseAnalyze?.addEventListener('click',analyzeCase);caseExport?.addEventListener('click',()=>{if(!currentCase)return;const blob=new Blob([JSON.stringify(currentCase,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='wadi-rum-mirage-case.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+// Restore case-builder navigation from the URL hash.
+const hash=location.hash.slice(1);if(hash==='case')document.querySelector(`[data-view="${hash}"]`)?.click();
+})();
