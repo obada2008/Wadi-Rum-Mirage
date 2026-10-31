@@ -48,6 +48,7 @@ python -m uvicorn backend.main:app --host 127.0.0.1 --port 8765
 - English: http://127.0.0.1:8765/?lang=en
 - API documentation: http://127.0.0.1:8765/docs
 
+Live Demo: https://wadi-rum-mirage.onrender.com/
 The analyzer and passive URL parsing run locally. Some map, image, and panorama resources rely on third-party connectivity.
 
 ## Project structure
